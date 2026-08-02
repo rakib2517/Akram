@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <!-- Ad SDK -->
-    <script src='//libtl.com/sdk.js' data-zone='11165488' data-sdk='show_11165488'></script>
+    <script src='//libtl.com/sdk.js' data-zone='11460549' data-sdk='show_11460549'></script>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -170,9 +170,9 @@ function updateBalanceDisplay() {
 async function handleAd(type) {
     document.getElementById("status").innerText = "এড লোড হচ্ছে, অপেক্ষা করুন...";
     
-    if (typeof show_11165488 === "function") {
+    if (typeof show_11460549 === "function") {
         try {
-            await show_11165488(type === 'pop' ? 'pop' : '');
+            await show_11460549(type === 'pop' ? 'pop' : '');
             balance += 0.15;
             updateBalanceDisplay();
             toast("অভিনন্দন! ০.১৫৳ যোগ হয়েছে।");
@@ -187,8 +187,8 @@ async function handleAd(type) {
 }
 
 function startAds() {
-    if (typeof show_11128671 === "function") {
-        show_11128671({ type: 'inApp', inAppSettings: { frequency: 2, interval: 30 } });
+    if (typeof show_11460549 === "function") {
+        show_11460549({ type: 'inApp', inAppSettings: { frequency: 2, interval: 30 } });
         toast("অটো ভিডিও এড চালু হয়েছে");
     } else {
         toast("SDK লোড হয়নি");
